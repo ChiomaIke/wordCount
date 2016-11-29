@@ -1,0 +1,26 @@
+{
+  "name": "count",
+  "version": "1.0.0",
+  "description": "counting words",
+  "main": "app/library.js",
+  "scripts": {
+    "test": "mocha test/test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChiomaIke/wordCount.git"
+  },
+  "keywords": [
+    "word"
+  ],
+  "author": "Chioma Ike",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ChiomaIke/wordCount/issues"
+  },
+  "homepage": "https://github.com/ChiomaIke/wordCount#readme",
+  "dependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.2.0"
+  }
+}
