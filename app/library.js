@@ -1,28 +1,23 @@
 module.exports = {
-words: function(sentence) {
-            var splitCount = sentence.split(' ').length;
-            var result = [];
-            var uniqueWords = [];
-            var wordCount = 1;
-            for (i = 0; i <= splitCount - 1; i++) {
-                if (uniqueWords.indexOf(sentence.split(' ')[i]) == -1) {
-                    uniqueWords.push(sentence.split(' ')[i]);
-
-                }
-            }
-            for (j = 0; j <= uniqueWords.length - 1; j++) {
-
-                    for (k = 1; k <= splitCount - 1; k++) {
-                        if (uniqueWords[j] == sentence.split(' ')[k]) {
-                            wordCount = wordCount + 1;
-                        }
-                    }
-                
-                    result.push((uniqueWords[j]) + ": " + wordCount);
-                wordCount = 1;
-            }
-          
-       
-            return result;
-        }
+ words: function(sentence){
+	var array_words = sentence.split(/\s+/);
+		  
+	var res_words = {};    
+	var is_prop = false;
+		  
+	for(var i = 0; i < array_words.length; i++) {
+		var word = array_words[i];
+			
+		  if(res_words[word] != null) {
+			if (typeof res_words[word] != 'number'){ /** if returned value is not a number, set the value to 1 */
+				res_words[word] = 1;
+			}else{					 
+			    res_words[word] += 1;
+			}
+			} else {
+			  res_words[word] = 1;				   
+			}	 
+		}
+		return res_words;
+	}
 }

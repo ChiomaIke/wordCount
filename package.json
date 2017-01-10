@@ -1,10 +1,10 @@
 {
-  "name": "count",
+  "name": "word-count",
   "version": "1.0.0",
   "description": "counting words",
-  "main": "app/library.js",
+  "main": "..app/library.js",
   "scripts": {
-    "test": "mocha test/test.js"
+    "test": "jasmine tests/test.js"
   },
   "repository": {
     "type": "git",
@@ -20,7 +20,9 @@
   },
   "homepage": "https://github.com/ChiomaIke/wordCount#readme",
   "dependencies": {
-    "chai": "^3.5.0",
-    "mocha": "^3.2.0"
+    "jasmine": "^2.5.2"
+  },
+  "directories": {
+    "test": "tests"
   }
 }

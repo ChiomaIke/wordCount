@@ -1,9 +1,10 @@
-(function(){
+(function() {
   'use strict';
 
-  var expect = require('expect');
-  var myApp = require('../app/library.js');
-  
+var jasmine = require('jasmine');
+
+var myApp = require('../app/library.js');
+
 describe("words()", function() {
   it("counts one word", function() {
     var expectedCounts = { word: 1 };
@@ -59,6 +60,7 @@ describe("words()", function() {
     var expectedCounts = { reserved: 1, words : 1, like :1,  prototype: 1, and : 1, toString: 1,  "ok?": 1};
     expect(myApp.words("reserved words like prototype and toString ok?")).toEqual(expectedCounts);
   });
+  
 });
 
 })();
